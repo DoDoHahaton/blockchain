@@ -1,7 +1,6 @@
-import dotenv
-
 import os
 from hashlib import sha256
+
 from django.db import models
 from dotenv import load_dotenv
 
@@ -36,7 +35,7 @@ class Block(models.Model):
 
     @classmethod
     def create(cls):
-        print(cls.is_chain_valid())
+        # print(cls.is_chain_valid())
         if not cls.is_chain_valid():
             return
 
@@ -95,7 +94,7 @@ class Transaction(models.Model):
 
     @classmethod
     def create(cls, sender, recipient, amount):
-        print(Block.is_last_filled())
+        # print(Block.is_last_filled())
         if Block.is_last_filled():
             Block.create()
 

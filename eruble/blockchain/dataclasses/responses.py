@@ -15,12 +15,20 @@ class Body:
         'authorized': False,
     }
 
+    FORBIDDEN = {
+        'text': 'Отказано в доступе'
+    }
+
     AUTHORIZED_TRUE = {
         'authorized': True,
     }
 
     CREATED = {
-        'text': 'Успешно создано'
+        'created': True
+    }
+
+    NOT_ENOUGH_MONEY = {
+        'text': 'Недостаточно средств'
     }
 
     DELETED = {
@@ -40,4 +48,5 @@ class Status:
     DELETED = 204
     UNAUTHORIZED = 401
     INVALID = 422
+    FORBIDDEN = 403
     NOT_FOUND = 404
